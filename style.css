@@ -11,7 +11,7 @@ body {
     background-color: #ddd;
     font-size: 1.1rem;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    margin: 3rem;
+    margin: 1.8rem;
 }
 
 .container {
@@ -156,6 +156,60 @@ body {
 }
 
 
+/* services */
+
+.services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 1.3rem;
+}
+
+.service {
+    background-color: #fff;
+    padding: 1.2rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.service:hover {
+    transform: scale(1.02);
+    transition: all .3s;
+}
+
+.icon {
+    font-size: 3em;
+}
+
+.service h3 {
+    font-size: 1.5em;
+}
+
+.service p {
+    font-size: .8em;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+
+/* gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 5rem;
+    gap: .3rem;
+}
+
+.gallery h2 {
+    /* grid-column-start: -1;
+    grid-column-end: 1; */
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+
 /* Resposive Breakpoint */
 
 @media screen and (max-width: 1024px) {
@@ -182,9 +236,13 @@ body {
         justify-content: center;
         align-items: start;
     }
+
+
 }
 @media screen and (max-width: 768px) {
-    nav ul {
+    .menu ul {
+        display: flex;
+        flex-direction: column;
         position: absolute;
         right: 0;
         flex-direction: column;
@@ -212,5 +270,11 @@ body {
     }
 }
 @media screen and (max-width: 600px) {
-    
+    .header {
+        grid-template-areas: 
+        "hero"
+        "f-1"
+        "f-2"
+        ;
+    }
 }
